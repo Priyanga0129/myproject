@@ -263,24 +263,42 @@ main {
 /* Left & Right Buttons */
 .slider-btn {
   position: absolute;
-  top: 20%;
+  top: 50%;
   transform: translateY(-50%);
-  z-index: 2;
+  background: white;
   border: none;
-  color: #ddd;
-  font-size: 2rem;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+  transition: background 0.2s;
+  font-size: 2rem;
+  color: #000;
+  cursor: pointer;
+  padding: 0;
+}
+
+.slider-btn i {
+  font-size: 18px;
+  color: black; /* ⬅️ Arrow color */
+}
+
+.slider-btn:hover {
+  background-color: #f0f0f0; /* ⬅️ Hover effect */
 }
 
 .slider-btn.prev {
   left: 0.5rem;
+  top: 267px;
 }
 
 .slider-btn.next {
   right: 0.5rem;
+  top: 267px;
 }
 
 @media (min-width: 768px) {
@@ -345,6 +363,7 @@ main {
 }
 /* Carousel Track Styling */
 .outfit-carousel-static {
+  margin-top: 5rem;
   width: 100%;
   display: flex;
   flex-wrap: nowrap;
@@ -362,8 +381,7 @@ main {
 
 /* Individual Images */
 .static-image {
-  max-width: 250px;
-  border-radius: 10px;
+  /* max-width: 250px; */
   flex-shrink: 0;
   transition: transform 0.3s ease-in-out;
   object-fit: cover;
@@ -592,7 +610,7 @@ h2.fw-bold.fst-italic {
   /* Tablet: iPad (768px - 991.98px) */
   @media (min-width: 768px) and (max-width: 991.98px) {
     .deals-carousel .deal img {
-      width: 120px;
+      width: 250px;
     }
 
     .deals-carousel .deal figcaption {
@@ -893,7 +911,9 @@ section.sale-banner .right p {
     .summer-offer .content {
       margin-top: 1rem;
       margin-left: 0 !important;
-    }
+      width: 100% !important;
+  }
+    
 
     .summer-offer .img-wrap {
       margin-right: 0 !important;
@@ -932,9 +952,9 @@ section.sale-banner .right p {
 }
 
 .summer-offer p {
-  margin: 1rem 0;
-  font-size: 0.9rem;
-  max-width: 80%;
+ margin: 1rem 0;
+    font-size: 1rem;
+    max-width: 100%;
 }
 
 .summer-offer .btn {
